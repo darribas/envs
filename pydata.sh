@@ -4,23 +4,25 @@ conda-env remove -y -n pydata
 
 conda create -y -n pydata ipython=4.1 jupyter=1.*
 
-conda install -n pydata -y --no-update-deps pip \
+conda install -n pydata -y --no-update-deps \
+    'pip' \
     'pandas=0.16*' \
-    'numpy=1.9' \
+    'numpy=1.9*' \
     'psycopg2' \
     'fiona=1.5' \
+    'gdal=1.11*' \
     'six' \
     'rasterio' \
-    'pytables=3.2.1' \
+    'pytables=3.2*' \
     'shapely=1.5.8' \
     'pyproj=1.9.4' \
-    'matplotlib=1.5*' \
+    'matplotlib=1.4*' \
     'seaborn=0.7' \
     'bokeh=0.11' \
     'ipywidgets=4.1*' \
     'scipy=0.17' \
     'statsmodels=0.6*' \
-    'scikit-learn=0.17*'
+    'scikit-learn=0.16*'
 
 conda install -y -n pydata -c anaconda-nb-extensions nbpresent
 
