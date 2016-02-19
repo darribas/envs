@@ -24,7 +24,7 @@ conda install -n pydata -y --no-update-deps \
     'statsmodels=0.6*' \
     'scikit-learn=0.16*'
 
-conda install -y -n pydata -c anaconda-nb-extensions nbpresent
+conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
 source activate pydata
 
