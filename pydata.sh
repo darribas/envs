@@ -6,6 +6,7 @@ conda create -y -n pydata ipython=4.1 jupyter=1.*
 
 conda install -n pydata -y --no-update-deps \
     'pip' \
+    'dask=0.8*' \
     'pandas=0.16*' \
     'numpy=1.9*' \
     'psycopg2' \
