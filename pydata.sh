@@ -23,6 +23,7 @@ conda install -n pydata -y --no-update-deps \
     'ipywidgets=4.1*' \
     'scipy=0.17' \
     'statsmodels=0.6*' \
+    'networkx=1.11' \
     'scikit-learn=0.16*'
 
 conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
