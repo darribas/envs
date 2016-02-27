@@ -9,6 +9,7 @@ conda install -n pydata -y --no-update-deps \
     'pandas=0.16*' \
     'numpy=1.9*' \
     'psycopg2' \
+    'sqlalchemy=1.0.12' \
     'fiona=1.5' \
     'gdal=1.11*' \
     'six' \
