@@ -24,7 +24,8 @@ conda install -n pydata -y --no-update-deps \
     'scipy=0.17' \
     'statsmodels=0.6*' \
     'networkx=1.11' \
-    'scikit-learn=0.16*'
+    'scikit-learn=0.16*' \
+    'krb5'
 
 conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
