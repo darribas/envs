@@ -7,7 +7,7 @@ conda create -y -n pydata ipython=4.1 jupyter=1.*
 conda install -n pydata -y --no-update-deps \
     'pip' \
     'dask=0.8*' \
-    'pandas=0.17*' \
+    'pandas=0.16*' \
     'numpy=1.9*' \
     'psycopg2' \
     'sqlalchemy=1.0.12' \
@@ -25,7 +25,7 @@ conda install -n pydata -y --no-update-deps \
 conda install -c ioos -n pydata -y --no-update-deps \
     'fiona=1.5*' \
     'gdal=1.11*' \
-    'rasterio=0.30' \
+    'rasterio=0.24' \
     'shapely=1.5.8' \
     'pyproj=1.9.4' \
     'krb5'
@@ -34,8 +34,7 @@ conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
 source activate pydata
 
-pip install -U geopy descartes clusterpy mplleaflet brewer2mpl clusterpy
-pip install qgrid
+pip install -U geopy descartes mplleaflet brewer2mpl clusterpy qgrid
 pip install -U --no-deps pysal==1.11.0
 
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git
