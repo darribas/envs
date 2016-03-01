@@ -1,10 +1,10 @@
 #!/bin/bash
 
-conda-env remove -y -n pydata
+conda-env remove -y -n pydata_exp
 
-conda create -y -n pydata ipython=4.1 jupyter=1.*
+conda create -y -n pydata_exp ipython=4.1 jupyter=1.*
 
-conda install -n pydata -y --no-update-deps \
+conda install -n pydata_exp -y --no-update-deps \
     'pip' \
     'dask=0.8*' \
     'pandas=0.17*' \
@@ -22,7 +22,7 @@ conda install -n pydata -y --no-update-deps \
     'networkx=1.11' \
     'scikit-learn=0.16*'
 
-conda install -c ioos -n pydata -y --no-update-deps \
+conda install -c ioos -n pydata_exp -y --no-update-deps \
     'fiona=1.6*' \
     'gdal=1.11*' \
     'rasterio=0.31' \
@@ -30,9 +30,9 @@ conda install -c ioos -n pydata -y --no-update-deps \
     'pyproj=1.9.4' \
     'krb5'
 
-conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
+conda install -y -n pydata_exp -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
-source activate pydata
+source activate pydata_exp
 
 pip install -U geopy descartes clusterpy mplleaflet brewer2mpl clusterpy
 pip install git+https://github.com/quantopian/qgrid.git@v0.3.0
