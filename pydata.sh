@@ -34,8 +34,14 @@ conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
 source activate pydata
 
-pip install -U geopy descartes mplleaflet brewer2mpl clusterpy qgrid
+pip install -U geopy descartes mplleaflet brewer2mpl clusterpy
 pip install -U --no-deps pysal==1.11.0
+pip install -U --no-deps qgrid==0.2.0
 
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git
+
+rm -f pydata_test.html
+jupyter nbconvert --to notebook --execute --allow-errors pydata_check.ipynb --output pydata_test.ipynb
+jupyter nbconvert --to html pydata_test.ipynb
+rm pydata_test.ipynb
 
