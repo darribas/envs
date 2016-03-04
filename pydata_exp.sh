@@ -24,6 +24,7 @@ conda install -n pydata_exp -y --no-update-deps \
 
 conda install -c ioos -n pydata_exp -y --no-update-deps \
     'fiona=1.6*' \
+    'libgdal=1.11*' \
     'gdal=1.11*' \
     'rasterio=0.31' \
     'shapely=1.5*' \
