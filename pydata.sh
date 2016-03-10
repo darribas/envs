@@ -5,7 +5,7 @@ conda-env remove -y -n pydata
 conda create -y -n pydata ipython=4.1 jupyter=1.*
 
 conda install -n pydata -y --no-update-deps \
-    'pip' \
+    'pip=7.1*' \
     'dask=0.8*' \
     'pandas=0.16*' \
     'numpy=1.9*' \
