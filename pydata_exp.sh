@@ -6,6 +6,7 @@ conda create -y -n pydata_exp ipython=4.1 jupyter=1.*
 
 conda install -n pydata_exp -y --no-update-deps \
     'pip' \
+    'cython=0.23.*' \
     'dask=0.8*' \
     'pandas=0.17*' \
     'numpy=1.10*' \
@@ -29,17 +30,18 @@ conda install -c ioos -n pydata_exp -y --no-update-deps \
     'rasterio=0.31' \
     'shapely=1.5*' \
     'pyproj=1.9.4' \
+    'cartopy=0.13.*' \
     'krb5'
 
 conda install -y -n pydata_exp -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
 source activate pydata_exp
 
-pip install -U geopy descartes clusterpy mplleaflet brewer2mpl
+pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl rpy2
 pip install git+https://github.com/quantopian/qgrid.git@v0.3.0
 pip install -U --no-deps pysal==1.11.0
 
-pip install -U --no-deps git+git://github.com/geopandas/geopandas.git
+pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
 rm -f pydata_test.html
 jupyter nbconvert --to notebook --execute --allow-errors pydata_check.ipynb --output pydata_test.ipynb
