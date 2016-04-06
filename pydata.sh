@@ -5,15 +5,16 @@ conda-env remove -y -n pydata
 conda create -y -n pydata ipython=4.1 jupyter=1.*
 
 conda install -n pydata -y --no-update-deps \
-    'pip=7.1*' \
+    'pip' \
+    'cython=0.23.*' \
     'dask=0.8*' \
-    'pandas=0.16*' \
-    'numpy=1.9*' \
+    'pandas=0.17*' \
+    'numpy=1.10*' \
     'psycopg2' \
     'sqlalchemy=1.0.12' \
     'six' \
     'pytables=3.2*' \
-    'matplotlib=1.4*' \
+    'matplotlib=1.5*' \
     'seaborn=0.7' \
     'bokeh=0.11' \
     'ipywidgets=4.1*' \
@@ -23,22 +24,24 @@ conda install -n pydata -y --no-update-deps \
     'scikit-learn=0.16*'
 
 conda install -c ioos -n pydata -y --no-update-deps \
-    'fiona=1.5*' \
+    'fiona=1.6*' \
+    'libgdal=1.11*' \
     'gdal=1.11*' \
-    'rasterio=0.24' \
-    'shapely=1.5.8' \
+    'rasterio=0.31' \
+    'shapely=1.5*' \
     'pyproj=1.9.4' \
+    'cartopy=0.13.*' \
     'krb5'
 
 conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
 source activate pydata
 
-pip install -U geopy descartes mplleaflet brewer2mpl clusterpy
+pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl rpy2
+pip install git+https://github.com/quantopian/qgrid.git@v0.3.0
 pip install -U --no-deps pysal==1.11.0
-pip install -U --no-deps qgrid==0.2.0
 
-pip install -U --no-deps git+git://github.com/geopandas/geopandas.git
+pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
 rm -f pydata_test.html
 jupyter nbconvert --to notebook --execute --allow-errors pydata_check.ipynb --output pydata_test.ipynb
