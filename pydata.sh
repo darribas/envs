@@ -4,7 +4,7 @@ conda-env remove -y -n pydata
 
 conda create -y -n pydata ipython=4.1 jupyter=1.*
 
-conda install -n pydata -y --no-update-deps \
+conda install -c conda-forge -n pydata -y --no-update-deps \
     'pip' \
     'cython=0.23.*' \
     'dask=0.8*' \
@@ -21,16 +21,14 @@ conda install -n pydata -y --no-update-deps \
     'scipy=0.17' \
     'statsmodels=0.6*' \
     'networkx=1.11' \
-    'scikit-learn=0.16*'
-
-conda install -c ioos -n pydata -y --no-update-deps \
+    'scikit-learn=0.16*' \
     'fiona=1.6*' \
     'libgdal=1.11*' \
     'gdal=1.11*' \
-    'rasterio=0.31' \
     'shapely=1.5*' \
     'pyproj=1.9.4' \
-    'cartopy=0.13.*' \
+    'cartopy=0.14*' \
+    'rasterio=0.32*' \
     'krb5'
 
 conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
