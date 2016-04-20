@@ -36,7 +36,7 @@ conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 source activate pydata
 
 pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl rpy2
-pip install git+https://github.com/quantopian/qgrid.git@v0.3.0
+pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
 pip install -U --no-deps pysal==1.11.0
 
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
