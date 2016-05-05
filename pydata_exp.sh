@@ -1,14 +1,14 @@
 #!/bin/bash
 
-conda-env remove -y -n pydata
+conda-env remove -y -n pydata_exp
 
-conda create -y -n pydata ipython=4.1 jupyter=1.*
+conda create -y -n pydata_exp ipython=4.1 jupyter=1.*
 
-conda install -c conda-forge -n pydata -y --no-update-deps \
+conda install -c conda-forge -n pydata_exp -y --no-update-deps \
     'pip' \
     'cython=0.23.*' \
     'dask=0.8*' \
-    'pandas=0.17*' \
+    'pandas=0.18*' \
     'numpy=1.10*' \
     'psycopg2' \
     'sqlalchemy=1.0.12' \
@@ -21,7 +21,7 @@ conda install -c conda-forge -n pydata -y --no-update-deps \
     'scipy=0.17' \
     'statsmodels=0.6*' \
     'networkx=1.11' \
-    'scikit-learn=0.16*' \
+    'scikit-learn=0.17*' \
     'fiona=1.6*' \
     'libgdal=1.11*' \
     'gdal=1.11*' \
@@ -31,9 +31,9 @@ conda install -c conda-forge -n pydata -y --no-update-deps \
     'rasterio=0.32*' \
     'krb5'
 
-conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
+conda install -y -n pydata_exp -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
-source activate pydata
+source activate pydata_exp
 
 pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl rpy2
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0

@@ -8,7 +8,7 @@ conda install -c conda-forge -n pydata -y --no-update-deps \
     'pip' \
     'cython=0.23.*' \
     'dask=0.8*' \
-    'pandas=0.17*' \
+    'pandas=0.18*' \
     'numpy=1.10*' \
     'psycopg2' \
     'sqlalchemy=1.0.12' \
@@ -21,7 +21,7 @@ conda install -c conda-forge -n pydata -y --no-update-deps \
     'scipy=0.17' \
     'statsmodels=0.6*' \
     'networkx=1.11' \
-    'scikit-learn=0.16*' \
+    'scikit-learn=0.17*' \
     'fiona=1.6*' \
     'libgdal=1.11*' \
     'gdal=1.11*' \
