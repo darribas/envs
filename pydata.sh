@@ -2,13 +2,15 @@
 
 conda-env remove -y -n pydata
 
-conda create -y -n pydata ipython=4.1 jupyter=1.*
+conda create -y -n pydata ipython=4.2 jupyter=1.*
 
 conda install -c conda-forge -n pydata -y --no-update-deps \
     'pip' \
     'cython=0.23.*' \
     'dask=0.8*' \
     'pandas=0.18*' \
+    'xlrd=0.9*' \
+    'xlsxwriter=0.8.*' \
     'numpy=1.10*' \
     'psycopg2' \
     'sqlalchemy=1.0.12' \
