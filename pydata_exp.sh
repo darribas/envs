@@ -1,8 +1,16 @@
 #!/bin/bash
 
+conda install -y conda=4.0.6
+
 conda-env remove -y -n pydata_exp
 
-conda create -y -n pydata_exp ipython=4.2 jupyter=1.*
+conda create -y -n pydata_exp ipython=4.2.* jupyter=1.*
+
+# rpy2 as in http://stackoverflow.com/questions/24987932/installing-rpy2-on-mac-osx-with-anaconda-python-3-4-and-r-3-1-installed-via-macp
+conda skeleton pypi rpy2 --version 2.8.0
+conda build rpy2
+conda install -n pydata_exp -y --use-local rpy2
+rm -r rpy2
 
 conda install -c conda-forge -n pydata_exp -y --no-update-deps \
     'pip' \
@@ -17,7 +25,7 @@ conda install -c conda-forge -n pydata_exp -y --no-update-deps \
     'six' \
     'pytables=3.2*' \
     'matplotlib=1.5*' \
-    'seaborn=0.7' \
+    'seaborn=0.7*' \
     'bokeh=0.11' \
     'ipywidgets=4.1*' \
     'scipy=0.17' \
@@ -33,15 +41,17 @@ conda install -c conda-forge -n pydata_exp -y --no-update-deps \
     'rasterio=0.32*' \
     'krb5'
 
-conda install -y -n pydata_exp -c anaconda-nb-extensions nbpresent nbbrowserpdf
+conda install -c anaconda-nb-extensions -n pydata_exp -y \
+    'nbpresent=2.*' \
+    'nbbrowserpdf' 
 
 source activate pydata_exp
 
-pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl rpy2
+pip install -U pip==8.1.*
+pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
-pip install -U --no-deps pysal==1.11.1
+pip install -U --no-deps pysal==1.11.*
 pip install --process-dependency-links git+https://github.com/pymc-devs/pymc3
-
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
 rm -f pydata_test.html
