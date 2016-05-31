@@ -2,36 +2,38 @@
 
 conda-env remove -y -n pydata
 
-conda create -y -n pydata ipython=4.2 jupyter=1.*
+conda create -y -n pydata_exp python=2.7.*
 
-conda install -c conda-forge -n pydata -y --no-update-deps \
-    'pip' \
+conda install -c conda-forge -n pydata_exp -y \
+    'bokeh=0.11' \
+    'cartopy=0.14*' \
     'cython=0.23.*' \
     'dask=0.8*' \
-    'pandas=0.18*' \
-    'xlrd=0.9*' \
-    'xlsxwriter=0.8.*' \
-    'numpy=1.10*' \
-    'psycopg2' \
-    'sqlalchemy=1.0.12' \
-    'six' \
-    'pytables=3.2*' \
-    'matplotlib=1.5*' \
-    'seaborn=0.7' \
-    'bokeh=0.11' \
-    'ipywidgets=4.1*' \
-    'scipy=0.17' \
-    'statsmodels=0.6*' \
-    'networkx=1.11' \
-    'scikit-learn=0.17*' \
     'fiona=1.6*' \
-    'libgdal=1.11*' \
     'gdal=1.11*' \
-    'shapely=1.5*' \
+    'ipython=4.2.*' \
+    'ipywidgets=4.1*' \
+    'jupyter=1.*' \
+    'krb5' \
+    'libgdal=1.11*' \
+    'networkx=1.11' \
+    'numpy=1.10*' \
+    'matplotlib=1.5*' \
+    'pandas=0.18*' \
+    'pip' \
+    'psycopg2' \
     'pyproj=1.9.4' \
-    'cartopy=0.14*' \
+    'pytables=3.2*' \
     'rasterio=0.32*' \
-    'krb5'
+    'seaborn=0.7*' \
+    'shapely=1.5*' \
+    'six' \
+    'scipy=0.17' \
+    'scikit-learn=0.17*' \
+    'sqlalchemy=1.0.12' \
+    'statsmodels=0.6*' \
+    'xlrd=0.9*' \
+    'xlsxwriter=0.8.*'
 
 conda install -y -n pydata -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
