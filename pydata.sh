@@ -2,9 +2,9 @@
 
 conda-env remove -y -n pydata
 
-conda create -y -n pydata_exp python=2.7.*
+conda create -y -n pydata python=2.7.*
 
-conda install -c conda-forge -n pydata_exp -y \
+conda install -c conda-forge -n pydata -y \
     'bokeh=0.11' \
     'cartopy=0.14*' \
     'cython=0.23.*' \
