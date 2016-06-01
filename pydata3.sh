@@ -39,14 +39,14 @@ conda install -y -n pydata3 -c anaconda-nb-extensions nbpresent nbbrowserpdf
 
 source activate pydata3
 
-pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl rpy2
+pip install -U --no-deps geopy descartes mplleaflet brewer2mpl rpy2
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
 pip install -U --no-deps pysal==1.11.1
 
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
 rm -f pydata_test.html
-jupyter nbconvert --to notebook --execute --allow-errors pydata_check.ipynb --output pydata_test.ipynb
+jupyter nbconvert --to notebook --execute --allow-errors pydata_check3.ipynb --output pydata_test.ipynb
 jupyter nbconvert --to html pydata_test.ipynb
 rm pydata_test.ipynb
 
