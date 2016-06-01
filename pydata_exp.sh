@@ -53,7 +53,7 @@ source activate pydata_exp
 pip install -U pip==8.1.*
 pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
-pip install -U --no-deps pysal==1.11.*
+pip install -U --no-deps https://github.com/pysal/pysal.git@dev
 pip install --process-dependency-links git+https://github.com/pymc-devs/pymc3
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
