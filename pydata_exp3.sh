@@ -53,12 +53,13 @@ source activate pydata_exp3
 pip install -U pip==8.1.*
 pip install -U --no-deps geopy descartes mplleaflet brewer2mpl
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
-pip install -U --no-deps https://github.com/pysal/pysal.git@dev
+pip install -U --no-deps git+https://github.com/pysal/pysal.git@dev
 pip install --process-dependency-links git+https://github.com/pymc-devs/pymc3
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
 rm -f pydata_test.html
-jupyter nbconvert --to notebook --execute --allow-errors pydata_check3.ipynb --output pydata_test.ipynb
+jupyter nbconvert --to notebook --nbformat 3 pydata_check.ipynb
+jupyter nbconvert --to notebook --execute --allow-errors pydata_check.v3.ipynb --output pydata_test.ipynb
 jupyter nbconvert --to html pydata_test.ipynb
-rm pydata_test.ipynb
+rm pydata_test.ipynb pydata_check.v3.ipynb
 
