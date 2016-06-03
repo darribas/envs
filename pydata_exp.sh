@@ -38,7 +38,7 @@ conda install -c conda-forge -n pydata_exp -y \
     'xlsxwriter=0.8.*'
 
 # rpy2 as in http://stackoverflow.com/questions/24987932/installing-rpy2-on-mac-osx-with-anaconda-python-3-4-and-r-3-1-installed-via-macp
-conda install -n pydata_exp -y --no-update-deps patchelf
+conda install -n _build -y --no-update-deps patchelf
 conda skeleton pypi rpy2 --version 2.8.0
 conda build rpy2
 conda install -n pydata_exp -y --use-local rpy2
@@ -53,7 +53,7 @@ source activate pydata_exp
 pip install -U pip==8.1.*
 pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
-pip install -U --no-deps https://github.com/pysal/pysal.git@dev
+pip install -U --no-deps git+https://github.com/pysal/pysal.git@dev
 pip install --process-dependency-links git+https://github.com/pymc-devs/pymc3
 pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
 
