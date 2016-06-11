@@ -6,11 +6,12 @@ conda-env remove -y -n pydata_exp
 
 conda create -y -n pydata_exp python=2.7.*
 
-conda install -c conda-forge -n pydata_exp -y \
+conda install -c conda-forge -c bokeh -n pydata_exp -y \
     'bokeh=0.11' \
     'cartopy=0.14*' \
     'cython=0.23.*' \
     'dask=0.8*' \
+    'datashader=0.2*', \
     'fiona=1.6*' \
     'gdal=1.11*' \
     'ipython=4.2.*' \
