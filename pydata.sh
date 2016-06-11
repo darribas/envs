@@ -43,7 +43,7 @@ pip install -U --no-deps geopy descartes clusterpy mplleaflet brewer2mpl
 pip install -U --no-deps git+https://github.com/quantopian/qgrid.git@v0.3.0
 pip install -U --no-deps pysal==1.11.1
 
-pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@master
+pip install -U --no-deps git+git://github.com/geopandas/geopandas.git@v0.2
 
 rm -f pydata_test.html
 jupyter nbconvert --to notebook --execute --allow-errors pydata_check.ipynb --output pydata_test.ipynb
